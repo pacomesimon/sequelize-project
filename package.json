@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src --out-dir lib",
+    "start": "node ./lib/index",
+    "buildAndStart": "npm run build && npm start"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,19 @@
   "bugs": {
     "url": "https://github.com/pacomesimon/sequelize-project/issues"
   },
-  "homepage": "https://github.com/pacomesimon/sequelize-project#readme"
+  "homepage": "https://github.com/pacomesimon/sequelize-project#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
+    "core-js": "^3.22.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11"
+  }
 }
